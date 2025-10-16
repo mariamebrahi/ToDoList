@@ -1,4 +1,6 @@
-import WelcomeScreen from "@/Screens/WelcomeScreen";
+
+import WelcomeScreen from "./Screens/WelcomeScreen";
+
 export default function Index() {
   return <WelcomeScreen/>;
 }

@@ -5,7 +5,7 @@
 import React from 'react'
 import { FlatList, Text, View } from 'react-native'
 
-export default function TasksList() {
+export default function TasksListScreen() {
     const tasks = ['to do task1', 'to do task2', 'to do task3', 'to do task4', 'to do task5']
 
   return (
