@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 export default function WelcomeScreen() {
 
     const router = useRouter();
@@ -29,5 +29,3 @@ export default function WelcomeScreen() {
     </View>
   )
 }
-
-const styles = StyleSheet.create({})
