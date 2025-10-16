@@ -1,7 +1,10 @@
+import { useLocalSearchParams } from 'expo-router';
 import React, { useState } from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
 
 export default function TaskDetailsScreen() {
+
+    const { taskObject } = useLocalSearchParams<{ taskObject?: string }>();
 
              const handlePressOnDone= () => {
                 console.log("handlePressOnDone");
@@ -14,7 +17,7 @@ export default function TaskDetailsScreen() {
         const [description, setdescription] = useState("");
   return (
     <View>
-      <Text>Task Details</Text>
+      <Text>Task: {taskObject} Details</Text>
       <TextInput placeholder='Email'
                     value={title}
                     onChangeText={setTitle}
