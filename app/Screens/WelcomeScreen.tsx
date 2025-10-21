@@ -1,11 +1,30 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { Button, Text, View } from 'react-native';
+import { supabase } from '../Supabase/supabase';
 export default function WelcomeScreen() {
 
     const router = useRouter();
 
+
+  const fetchTasks = async () => {
+  const { data, error } = await supabase
+    .from('task') // your table name
+    .select('*'); // columns you want, * = all
+
+    
+
+  if (error) {
+    console.error('Error fetching tasks:', error);
+  } else {
+    console.log('Fetched tasks:', data);
+  }
+};
     const handlePressOnStart= () => {
+        console.log("**************************");
+        //console.log(supabase);
+        fetchTasks();
+        console.log("**************************");
         console.log("handlePressOnStart");
         router.push('/Screens/TasksListScreen')
     }
